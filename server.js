@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.port|| 3000
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://rishabhkushwaha:NI8aPhaApTuidNSF@cluster0.a7ukjms.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
