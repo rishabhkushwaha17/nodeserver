@@ -9,7 +9,9 @@ client.connect(err => {
   // perform actions on the collection object
 }).then((a)=>{  console.log(a);
 });
-
+app.get('/', (req, res) => {
+    res.send("ResultCode");
+  })
 app.get('/roomstate', (req, res) => {
   client.db("test").collection("devices").insertOne(req);
   res.send({ "ResultCode" : 0, "Message" : "OK" });
